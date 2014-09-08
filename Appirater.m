@@ -443,6 +443,10 @@ static BOOL _alwaysUseMainBundle = NO;
                        ^{
                            [self showRatingAlert];
                        });
+	} else {
+		if (self.delegate && [self.delegate respondsToSelector:@selector(appiraterRateConditionsNotMet:)]) {
+			[self.delegate appiraterRateConditionsNotMet:[Appirater sharedInstance]];
+		}
 	}
 }
 
@@ -457,6 +461,10 @@ static BOOL _alwaysUseMainBundle = NO;
                        ^{
                            [self showRatingAlert];
                        });
+	} else {
+		if (self.delegate && [self.delegate respondsToSelector:@selector(appiraterRateConditionsNotMet:)]) {
+			[self.delegate appiraterRateConditionsNotMet:[Appirater sharedInstance]];
+		}
 	}
 }
 

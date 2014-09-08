@@ -19,4 +19,7 @@
 -(void)appiraterDidOptToRemindLater:(Appirater *)appirater;
 -(void)appiraterWillPresentModalView:(Appirater *)appirater animated:(BOOL)animated;
 -(void)appiraterDidDismissModalView:(Appirater *)appirater animated:(BOOL)animated;
+
+-(void)appiraterRateConditionsNotMet:(Appirater *)appirater;
+
 @end
