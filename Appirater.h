@@ -182,6 +182,11 @@ extern NSString *const kAppiraterReminderRequestDate;
 */
 + (void)closeModal;
 
+/*!
+ Resets all the data saved up until now.
+ */
++ (void)resetUserData;
+
 @end
 
 @interface Appirater(Configuration)

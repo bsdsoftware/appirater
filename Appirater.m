@@ -693,4 +693,13 @@ static BOOL _alwaysUseMainBundle = NO;
 	}
 }
 
++ (void)resetUserData {
+	NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+	NSArray *keysToBeRemoved = @[kAppiraterFirstUseDate, kAppiraterUseCount, kAppiraterSignificantEventCount, kAppiraterCurrentVersion, kAppiraterRatedCurrentVersion, kAppiraterDeclinedToRate, kAppiraterReminderRequestDate];
+	for (NSString *key in keysToBeRemoved) {
+		[userDefaults removeObjectForKey:key];
+	}
+	[userDefaults synchronize];
+}
+
 @end
